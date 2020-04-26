@@ -1,4 +1,4 @@
-# Lab 05 instructions
+# Lab 05 v3 instructions
 
 ## Objective
 
@@ -15,28 +15,28 @@ Design an algorithm that reads an LL(1) gramar and produces the corresponding AS
 
 Create a program in C that taking as an example the gramar in Figure 1:
 
-* Read the gramar from an external file <gramar.conf>
+* Read the gramar from an external file [gramar.conf](gramar.conf)
 * Gramar will be in Backus-Naur Form (BNF) notation
-* Read the token list from another file <tokens.txt>
+* Read the token list from another file tokens.txt
 * Assume that is an LL(1) gramar
 * Create the abstrct syntax tree as an struct in C code
 * Print the AST graph using [DOT grapviz](http://www.graphviz.org) library
 
-![gramar](gramar_image.png)
 Figure 1
 
-## Expected result:
-```
-./sytax_parser <gramar.conf> <tokens.txt>
+Example of tokens.txt:
 
-graph G {
-	S -- A;
-	A -- B;
-	A -- c;
-	B -- b;
-	B -- d;
-}
 ```
+floatdcl id
+intdcl id
+id assign inum
+id assign id plus fnum
+print id
+
+```
+
+## Expected result:
+
 
 The image can be generated as:
 ```
@@ -44,8 +44,10 @@ The image can be generated as:
 dot log -Tpng >result.png
 ```
 
-![graph](graph.png)
-Figure 2
+
+```
+
+```
 
 ## Please send the mail as git send mail:
 
